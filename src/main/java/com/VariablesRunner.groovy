@@ -1,5 +1,7 @@
 package com
 
+import groovy.transform.CompileStatic
+
 import java.sql.Date as SqlDate  //alias
 
 
@@ -14,6 +16,7 @@ class VariablesRunner {
      * */
     def field;
 
+//    @CompileStatic
     static void main(def args) {
         Integer value = 5
         Integer valueLong = 5L
@@ -22,7 +25,8 @@ class VariablesRunner {
         def bigInt = 22G
 
 
-        new SqlDate()
+//        new SqlDate()
+
 
 
 

@@ -1,5 +1,16 @@
 package com.scripts
 
+
+
+/**
+ * " "
+ * ''
+ * """ """
+ * ''''''
+ * / /
+ * $/ /$
+ * */
+
 def name = "Ivan'''''''''''''\''''"
 def name2 = 'Ivan"""""""\""""'
 def name3 = '''Ivan ivanov'''

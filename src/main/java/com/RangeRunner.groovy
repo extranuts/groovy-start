@@ -16,7 +16,7 @@ class RangeRunner {
             println it
         }
 
-        (WeekDay.WE..WeekDay.MO).each { println it}
+         (WeekDay.WE..WeekDay.MO).each { println it}
 
     }
 }

@@ -33,4 +33,16 @@ class Student implements WithId {
 //        .age(18)
 //        .build()
     }
+
+    def methodMissing(String name, Object arguments){
+        println "missing method $name is invoked: $arguments"
+        def field = name - 'findBy'
+        def fieldValue = this."$field"
+        println "select * from Student whera $field = $fieldValue"
+
+    }
+    def propertyMissing(String name) {
+        println "miss props $name"
+        "default value"
+    }
 }

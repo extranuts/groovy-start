@@ -13,7 +13,7 @@ import groovy.util.logging.Slf4j
 @TupleConstructor
 @EqualsAndHashCode
 //@Canonical
-@Immutable
+//@Immutable
 @Builder
 //@Slf4j
 //@Mixin
@@ -44,5 +44,20 @@ class Student implements WithId {
     def propertyMissing(String name) {
         println "miss props $name"
         "default value"
+    }
+
+    def getInfo() {
+        Closure closure = {
+            println thisObject // this
+            println owner
+            println delegate
+            Closure second  = {
+                println thisObject // this
+                println owner
+                println delegate  // increment params
+            }  // declaration
+            second() //execution
+        }
+        closure
     }
 }
